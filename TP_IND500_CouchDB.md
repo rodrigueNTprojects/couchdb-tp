@@ -13,7 +13,7 @@
 ### **Installation**
 
     # Cloner le projet
-    git clone [url-du-projet]
+    git clone https://github.com/rodrigueNTprojects/couchdb-tp.git
     cd couchdb-tp
 
     # Télécharger les dépendances Go
