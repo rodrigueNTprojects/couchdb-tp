@@ -1,0 +1,113 @@
+# Binaires compiles
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Fichiers de test
+*.test
+*.out
+
+# Dossiers de dependances Go
+vendor/
+
+# Fichiers de module Go
+go.sum
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Logs et fichiers de debug
+*.log
+debug
+debug.test
+
+# Fichiers de configuration locaux
+config.local.yaml
+.env
+.env.local
+
+# Donnees CSV volumineuses (garder seulement les exemples)
+data/large-dataset.csv
+data/production-data/
+data/*.csv
+!data/small-dataset.csv
+!data/example-*.csv
+
+# Bases de donnees locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Caches et fichiers temporaires d'editeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dossiers de build et deploiement
+build/
+dist/
+release/
+
+# Fichiers Docker locaux
+docker-compose.override.yml
+.dockerignore
+
+# Fichiers de profiling Go
+*.prof
+cpu.prof
+mem.prof
+
+# Fichiers de coverage
+coverage.out
+coverage.html
+
+# Fichiers PID
+*.pid
+
+# Dossiers de logs specifiques
+logs/
+*.log.*
+
+# Fichiers de certificats (si utilises)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Fichiers de documentation generes
+docs/build/
+site/
+
+# Fichiers OS specifiques
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Fichiers temporaires Windows
+$RECYCLE.BIN/
+Desktop.ini
+
+# Fichiers temporaires Linux/Unix
+*.tmp
+.directory
+
+# Checkpoint files
+.checkpoints/
+checkpoints/

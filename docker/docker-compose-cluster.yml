@@ -1,0 +1,77 @@
+networks:
+  couchdb-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
+
+services:
+  couchdb-na-1:
+    image: couchdb:3.3
+    container_name: couchdb-na-1
+    hostname: couchdb-na-1
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=ecommerce2024
+    ports:
+      - "5987:5984"
+    volumes:
+      - couchdb_na1:/opt/couchdb/data
+    networks:
+      couchdb-net:
+        ipv4_address: 192.168.100.10
+    restart: unless-stopped
+    
+  couchdb-na-2:
+    image: couchdb:3.3
+    container_name: couchdb-na-2
+    hostname: couchdb-na-2
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=ecommerce2024
+    ports:
+      - "5988:5984"
+    volumes:
+      - couchdb_na2:/opt/couchdb/data
+    networks:
+      couchdb-net:
+        ipv4_address: 192.168.100.11
+    restart: unless-stopped
+    
+  couchdb-eu-1:
+    image: couchdb:3.3
+    container_name: couchdb-eu-1
+    hostname: couchdb-eu-1
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=ecommerce2024
+    ports:
+      - "5989:5984"
+    volumes:
+      - couchdb_eu1:/opt/couchdb/data
+    networks:
+      couchdb-net:
+        ipv4_address: 192.168.100.12
+    restart: unless-stopped
+    
+  couchdb-ap-1:
+    image: couchdb:3.3
+    container_name: couchdb-ap-1
+    hostname: couchdb-ap-1
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=ecommerce2024
+    ports:
+      - "5990:5984"
+    volumes:
+      - couchdb_ap1:/opt/couchdb/data
+    networks:
+      couchdb-net:
+        ipv4_address: 192.168.100.13
+    restart: unless-stopped
+
+volumes:
+  couchdb_na1:
+  couchdb_na2:
+  couchdb_eu1:
+  couchdb_ap1:
